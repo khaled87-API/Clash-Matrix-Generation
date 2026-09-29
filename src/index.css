@@ -1,0 +1,475 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Custom sleek scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(3, 7, 18, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(71, 85, 105, 0.6);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 182, 212, 0.8);
+  }
+}
+
+.cyber-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ========================================================================== */
+/* LIGHT THEME (EHAF / QCES Corporate Identity)                               */
+/* Primary Blue: #24438C | Cyan Accent: #0798D1 | Dark Blue: #183875         */
+/* Light Background: #F4F7FA | Card Background: #FFFFFF | Border: #D9E2EC    */
+/* Primary Text: #17324D | Secondary Text: #5B6B7A                            */
+/* ========================================================================== */
+:root {
+  /* EHAF - QCES 2019 Brand Design Tokens (Extracted from official logo) */
+  --ehaf-primary-blue: #24438C;
+  --ehaf-dark-blue: #183875;
+  --ehaf-cyan: #0798D1;
+  --ehaf-cyan-light: #38BDF8;
+  --ehaf-cyan-subtle: #E0F2FE;
+  --ehaf-white: #FFFFFF;
+
+  /* Theme-Neutral & Dark Mode Accessible Text Tokens (Unchanged in Dark Mode) */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-accent: #38BDF8;
+}
+
+html.light,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Centralized Light Theme Tokens */
+  --light-primary: #24438C;
+  --light-primary-dark: #183875;
+  --light-primary-light: #2D52A8;
+  --light-accent: #0798D1;
+  --light-accent-subtle: #E0F2FE;
+  --light-background: #F4F7FA;
+  --light-surface: #FFFFFF;
+  --light-surface-secondary: #F8FAFC;
+  --light-border: #D9E2EC;
+  --light-border-subtle: #E2E8F0;
+
+  /* High-Contrast WCAG-Accessible Light Theme Text Tokens */
+  --text-primary: #173B73;
+  --text-secondary: #52657A;
+  --text-muted: #66788A;
+  --text-accent: #0369A1;
+
+  --light-text-primary: #173B73;
+  --light-text-secondary: #52657A;
+  --light-text-muted: #66788A;
+  --light-success: #047857;
+  --light-warning: #B45309;
+  --light-error: #BE123C;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F4F7FA;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #0798D1;
+}
+
+html.light .cyber-grid {
+  background-image: radial-gradient(rgba(23, 50, 77, 0.08) 1px, transparent 1px);
+}
+
+/* Root background & typography */
+html.light body,
+html.light [data-theme-root],
+html.light .bg-\[\#030712\] {
+  background-color: #F4F7FA !important;
+  color: var(--text-primary) !important;
+}
+
+/* Top Headers & Bars */
+html.light header,
+html.light .bg-\[\#070D1B\],
+html.light .bg-\[\#070D1B\]\/90,
+html.light .bg-\[\#060C1A\],
+html.light .bg-\[\#060C1A\]\/95,
+html.light .bg-\[\#050A15\],
+html.light .bg-\[\#050A15\]\/90 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #D9E2EC !important;
+  color: var(--text-primary) !important;
+}
+
+/* Primary cards & panels */
+html.light .bg-slate-900,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/90,
+html.light .bg-\[\#0A101D\]\/60,
+html.light .bg-\[\#0A101D\]\/70,
+html.light .bg-\[\#0A101D\]\/80,
+html.light .bg-\[\#0A1124\]\/90,
+html.light .bg-\[\#0B132B\],
+html.light .bg-\[\#090F1E\],
+html.light .bg-\[\#090F1E\]\/95,
+html.light .bg-\[\#080E1E\] {
+  background-color: #FFFFFF !important;
+  border-color: #D9E2EC !important;
+  box-shadow: 0 1px 3px rgba(23, 50, 77, 0.05), 0 4px 14px rgba(23, 50, 77, 0.04) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Secondary nested containers / headers / row strips */
+html.light .bg-slate-950,
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-800,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/70,
+html.light .bg-slate-800\/80,
+html.light .bg-slate-850 {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Borders */
+html.light .border-white\/\[0\.06\],
+html.light .border-white\/\[0\.08\],
+html.light .border-white\/\[0\.1\],
+html.light .border-white\/\[0\.12\],
+html.light .border-white\/10,
+html.light .border-slate-800,
+html.light .border-slate-700,
+html.light .border-slate-700\/60 {
+  border-color: #D9E2EC !important;
+}
+
+/* Text Hierarchy */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6,
+html.light .text-white,
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-gray-100,
+html.light .text-gray-200,
+html.light .text-zinc-100,
+html.light .text-zinc-200 {
+  color: var(--text-primary) !important;
+}
+
+html.light .text-slate-300,
+html.light .text-slate-400,
+html.light .text-gray-300,
+html.light .text-gray-400,
+html.light .text-zinc-300,
+html.light .text-zinc-400 {
+  color: var(--text-secondary) !important;
+}
+
+html.light .text-slate-500,
+html.light .text-slate-600,
+html.light .text-gray-500,
+html.light .text-zinc-500 {
+  color: var(--text-muted) !important;
+}
+
+/* High Contrast Accent & Semantic Text for Light Theme */
+html.light .text-cyan-200,
+html.light .text-cyan-300,
+html.light .text-cyan-400,
+html.light .text-cyan-500,
+html.light [class*="text-cyan-300"],
+html.light [class*="text-cyan-400"] {
+  color: var(--text-accent) !important;
+}
+
+html.light .text-indigo-200,
+html.light .text-indigo-300,
+html.light .text-indigo-400,
+html.light .text-indigo-500,
+html.light [class*="text-indigo-300"],
+html.light [class*="text-indigo-400"] {
+  color: #3730A3 !important;
+}
+
+html.light .text-emerald-200,
+html.light .text-emerald-300,
+html.light .text-emerald-400,
+html.light [class*="text-emerald-300"],
+html.light [class*="text-emerald-400"] {
+  color: #047857 !important;
+}
+
+html.light .text-amber-200,
+html.light .text-amber-300,
+html.light .text-amber-400,
+html.light [class*="text-amber-300"],
+html.light [class*="text-amber-400"] {
+  color: #B45309 !important;
+}
+
+html.light .text-rose-200,
+html.light .text-rose-300,
+html.light .text-rose-400,
+html.light [class*="text-rose-300"],
+html.light [class*="text-rose-400"] {
+  color: #BE123C !important;
+}
+
+/* Tables & Data Grids */
+html.light table th {
+  background-color: #F0F4F8 !important;
+  color: var(--text-primary) !important;
+  border-color: #D9E2EC !important;
+}
+
+html.light table td {
+  border-color: #E2E8F0 !important;
+  color: var(--text-primary) !important;
+}
+
+html.light table tr:hover td {
+  background-color: #F8FAFC !important;
+}
+
+/* Retain high-contrast white text on solid colored buttons & action icons */
+html.light button.bg-cyan-500,
+html.light button.bg-cyan-600,
+html.light button.bg-indigo-600,
+html.light button.bg-indigo-500,
+html.light button.bg-emerald-600,
+html.light button.bg-emerald-500,
+html.light button.bg-rose-600,
+html.light button.bg-blue-600,
+html.light button.bg-gradient-to-r,
+html.light a.bg-gradient-to-r,
+html.light .btn-solid-text-white,
+html.light [class*="bg-cyan-600"] > span,
+html.light [class*="bg-indigo-600"] > span,
+html.light [class*="bg-emerald-600"] > span,
+html.light [id^="step-nav-btn-"].bg-gradient-to-r,
+html.light [id^="step-nav-btn-"].bg-gradient-to-r *,
+html.light button.bg-cyan-500 *,
+html.light button.bg-cyan-600 *,
+html.light button.bg-indigo-600 *,
+html.light button.bg-emerald-600 *,
+html.light button.bg-rose-600 *,
+html.light [class*="bg-rose-500"],
+html.light [class*="bg-rose-500"] * {
+  color: #FFFFFF !important;
+}
+
+/* Accessible Disabled Elements in Light Theme */
+html.light button:disabled,
+html.light button[disabled],
+html.light [aria-disabled="true"],
+html.light .cursor-not-allowed {
+  opacity: 0.65 !important;
+}
+html.light button:disabled *,
+html.light button[disabled] * {
+  color: var(--text-muted) !important;
+}
+
+/* Form Inputs, Selects, Labels, and Textareas */
+html.light label {
+  color: var(--text-primary) !important;
+}
+
+html.light input[type="text"],
+html.light input[type="number"],
+html.light input[type="file"],
+html.light select,
+html.light textarea {
+  background-color: #FFFFFF !important;
+  border-color: #D9E2EC !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 1px 2px rgba(23, 50, 77, 0.04) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: #0798D1 !important;
+  outline-color: #0798D1 !important;
+  box-shadow: 0 0 0 3px rgba(7, 152, 209, 0.15) !important;
+}
+
+/* File Upload Dropzones */
+html.light [class*="border-dashed"] {
+  border-color: #CBD5E1 !important;
+  background-color: #F8FAFC !important;
+}
+html.light [class*="border-dashed"]:hover {
+  border-color: #0798D1 !important;
+  background-color: #F0F9FF !important;
+}
+
+/* Badges & Pills */
+html.light .bg-cyan-950\/40,
+html.light .bg-cyan-950\/50,
+html.light .bg-cyan-950\/60,
+html.light .bg-cyan-950\/80,
+html.light .bg-cyan-500\/10 {
+  background-color: #E0F2FE !important;
+  border-color: #BAE6FD !important;
+  color: #0369A1 !important;
+}
+html.light .bg-cyan-950\/40 *,
+html.light .bg-cyan-950\/50 *,
+html.light .bg-cyan-950\/60 *,
+html.light .bg-cyan-950\/80 *,
+html.light .bg-cyan-500\/10 * {
+  color: #0369A1 !important;
+}
+
+html.light .bg-indigo-950\/20,
+html.light .bg-indigo-950\/30,
+html.light .bg-indigo-950\/70,
+html.light .bg-indigo-950\/80 {
+  background-color: #EEF2FF !important;
+  border-color: #C7D2FE !important;
+  color: #3730A3 !important;
+}
+html.light .bg-indigo-950\/20 *,
+html.light .bg-indigo-950\/30 *,
+html.light .bg-indigo-950\/70 *,
+html.light .bg-indigo-950\/80 * {
+  color: #3730A3 !important;
+}
+
+html.light .bg-emerald-950\/20,
+html.light .bg-emerald-950\/30,
+html.light .bg-emerald-950\/40,
+html.light .bg-emerald-950\/50,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-950\/80 {
+  background-color: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+}
+html.light .bg-emerald-950\/20 *,
+html.light .bg-emerald-950\/30 *,
+html.light .bg-emerald-950\/40 *,
+html.light .bg-emerald-950\/50 *,
+html.light .bg-emerald-950\/60 *,
+html.light .bg-emerald-950\/80 * {
+  color: #065F46 !important;
+}
+
+html.light .bg-amber-950\/30,
+html.light .bg-amber-950\/40,
+html.light .bg-amber-950\/60 {
+  background-color: #FFFBEB !important;
+  border-color: #FDE68A !important;
+  color: #92400E !important;
+}
+html.light .bg-amber-950\/30 *,
+html.light .bg-amber-950\/40 *,
+html.light .bg-amber-950\/60 * {
+  color: #92400E !important;
+}
+
+html.light .bg-rose-950\/30,
+html.light .bg-rose-950\/40,
+html.light .bg-rose-950\/50,
+html.light .bg-rose-950\/60 {
+  background-color: #FFF1F2 !important;
+  border-color: #FECDD3 !important;
+  color: #9F1239 !important;
+}
+html.light .bg-rose-950\/30 *,
+html.light .bg-rose-950\/40 *,
+html.light .bg-rose-950\/50 *,
+html.light .bg-rose-950\/60 * {
+  color: #9F1239 !important;
+}
+
+/* Code Previews */
+html.light pre,
+html.light code.font-mono,
+html.light code {
+  background-color: #F8FAFC !important;
+  color: var(--text-primary) !important;
+  border-color: #D9E2EC !important;
+}
+
+/* Modals */
+html.light .fixed.inset-0.bg-black\/80,
+html.light .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(23, 50, 77, 0.45) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Footer */
+html.light footer {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #D9E2EC !important;
+  color: var(--text-secondary) !important;
+}
+
+/* User-Selected Light Theme Custom Backgrounds (Strictly Isolated to Light Theme) */
+html.light #hero-banner-upload-step,
+html.light div#root > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background-color: #9cdffb !important;
+  border-color: #72c6ea !important;
+}
+
+html.light #dropzone-excel-upload,
+html.light div#root > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div#dropzone-excel-upload:nth-of-type(2) {
+  background-color: #9cdffb !important;
+  border-color: #72c6ea !important;
+}
+
+html.light #btn-toggle-user-guide,
+html.light div#root > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > button#btn-toggle-user-guide:nth-of-type(1) {
+  background-color: #9cdffb !important;
+  border-color: #72c6ea !important;
+}
+
+html.light .step-progress-container,
+html.light div#root > div:nth-of-type(1) > div:nth-of-type(3) {
+  background-color: #ffffff !important;
+  border-color: #D9E2EC !important;
+}
+
+/* User-Selected Light Theme Custom Backgrounds for XML Comparing (Strictly Isolated to Light Theme) */
+html.light .xml-comparing-banner,
+html.light div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background-color: #9cdffb !important;
+  border-color: #72c6ea !important;
+}
+
+html.light .xml-document-viewer,
+html.light div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1),
+html.light div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  background-color: #9cdffb !important;
+  border-color: #72c6ea !important;
+}

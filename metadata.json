@@ -1,0 +1,6 @@
+{
+  "name": "BIM Clash Matrix to Navisworks XML Generator",
+  "description": "Convert Excel BIM Clash Detection Matrices into Autodesk Navisworks Clash Detective Selection Sets and Clash Tests XML with dynamic column mapping, condition presets, matrix validation, and XML export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

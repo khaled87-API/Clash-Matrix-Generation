@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clash Tests Generator</title>
+    <meta name="description" content="Convert Excel BIM Clash Detection Matrices into Autodesk Navisworks Clash Detective Selection Sets and Clash Tests XML with dynamic column mapping, condition presets, matrix validation, and XML export." />
+    <meta property="og:title" content="Clash Tests Generator" />
+    <meta property="og:description" content="Convert Excel BIM Clash Detection Matrices into Autodesk Navisworks Clash Detective Selection Sets and Clash Tests XML with dynamic column mapping, condition presets, matrix validation, and XML export." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('bim_app_theme');
+          if (t === 'light') {
+            document.documentElement.classList.add('light');
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
